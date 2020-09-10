@@ -1,0 +1,31 @@
+name: Deploy website
+on: 
+  push:
+    branches: 
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      - name: Make executable
+        run: "chmod +x ./_build.sh"
+      # Runs a set of commands using the runners shell
+      - name: Run docker for R 
+        uses: docker://atusy/atusydown
+        with:
+          args: "/github/workspace/_build.sh"
+          
+#      # Runs a set of commands using the runners shell
+#      - name: Run docker for R 
+#        uses: docker://rocker/r-apt:disco
+#        with:
+#          args: "Rscript --vanilla programs/libraries.R ubuntu"      
+          
+      # send it to gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           publish_dir: _book
