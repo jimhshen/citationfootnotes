@@ -19,3 +19,10 @@ knitr::kable(
 ```
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+This is a citation [@johndoe2020a].[^note1]
+
+The citation in the footnote does not show up in the end of chapter references section, but does show up in the end of book references.
+
+
+[^note1]: This footnote contains a citation [@janesmith2019]
