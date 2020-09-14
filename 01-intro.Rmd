@@ -6,8 +6,12 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 This is a citation [@johndoe2020a].[^note1]
 
-Citations in footnotes in line doesn't work either^[This is another footnote that contains a citation @bobjohnson2018]
+Citations in footnotes in line doesn't work either
 
 The citations in the footnotes do not show up in the end of chapter references section (right below this line), but does show up in the end of book references.
+
+<div style=“display:none;”>
+@bobjohnson2018
+</div>
 
 [^note1]: This footnote contains a citation [@janesmith2019]
