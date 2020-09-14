@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Literature | A Minimal Book Example</title>
+  <title>Chapter 3 Workaround Footnote Citations | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Literature | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 3 Workaround Footnote Citations | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Literature | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 3 Workaround Footnote Citations | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -135,8 +135,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Broken footnote citations</a></li>
+<li class="chapter" data-level="3" data-path="workaround-footnote-citations.html"><a href="workaround-footnote-citations.html"><i class="fa fa-check"></i><b>3</b> Workaround Footnote Citations</a></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
@@ -164,10 +164,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literature" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Literature</h1>
-<p>Here is a review of existing methods.</p>
+<div id="workaround-footnote-citations" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Workaround Footnote Citations</h1>
+<p>The workaround is to include an invisible text chunk.</p>
+<p>This is a citation <span class="citation">(John Doe <a href="#ref-johndoe2020a" role="doc-biblioref">2020</a>)</span>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>This sentence has another footnote citation.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<div class="invisible" style="display:none">
+<p><span class="citation">Bob Johnson (<a href="#ref-bobjohnson2018" role="doc-biblioref">2018</a>)</span>
+<span class="citation">Jane Smith (<a href="#ref-janesmith2019" role="doc-biblioref">2019</a>)</span></p>
+</div>
 
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-bobjohnson2018">
+<p>Bob Johnson. 2018. “Article 3.”</p>
+</div>
+<div id="ref-janesmith2019">
+<p>Jane Smith. 2019. “Article 2.”</p>
+</div>
+<div id="ref-johndoe2020a">
+<p>John Doe. 2020. “Article 1.”</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>This footnote contains a citation <span class="citation">(Jane Smith <a href="#ref-janesmith2019" role="doc-biblioref">2019</a>)</span><a href="workaround-footnote-citations.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>This is another footnote that contains a citation <span class="citation">Bob Johnson (<a href="#ref-bobjohnson2018" role="doc-biblioref">2018</a>)</span><a href="workaround-footnote-citations.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
