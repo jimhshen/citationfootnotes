@@ -2,14 +2,20 @@
 
 The workaround is to include an invisible text chunk.
 
-This is a citation [@johndoe2020a].[^note1]
-
-This sentence has another footnote citation.^[This is another footnote that contains a citation @bobjohnson2018]
-
-[^note1]: This footnote contains a citation [@janesmith2019]
-
-::: {.invisible style="display:none" }
+```
+::: {.invisible style="display:none"}
 @bobjohnson2018
 @janesmith2019
 :::
+```
 
+This is a citation [@johndoe2020].[^note2]
+
+This sentence has another footnote citation.^[This is another footnote that contains a citation @bobjohnson2018]
+
+[^note2]: This footnote contains a citation [@janesmith2019]
+
+::: {.invisible style="display:none"}
+@bobjohnson2018
+@janesmith2019
+:::

@@ -1,3 +1,11 @@
-# Methods
+# Chapter-bib issues
 
-We describe our methods in this chapter.
+Chapter-bib seems to ignore parts of the CSL file and breaks bibliography entries by multiple authors where authors have a period in their name.
+
+
+
+Cite John Doe's papers [@johndoe2019; @johndoe2020]. This does not suppress the author's name for the second article.
+
+Cite a paper by multiple authors [@able2001; @able2002]. This does not suppress the author names for the second article.
+
+Cite a paper by multiple authors with a period in the first author's name [@zebra2003; @zebra2004]. This results in two entries for Zebra 2003, and a suppressed (but without the expected --------) set of names for Zebra 2002.

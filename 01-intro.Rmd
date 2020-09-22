@@ -2,7 +2,7 @@
 
 Citations in footnotes do not appear at the end of chapter references.
 
-This is a citation [@johndoe2020a].[^note1]
+This is a citation [@johndoe2020].[^note1]
 
 Citations in footnotes in line doesn't work either.^[This is another footnote that contains a citation @bobjohnson2018]
 
