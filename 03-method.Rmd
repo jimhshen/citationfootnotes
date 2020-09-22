@@ -6,6 +6,6 @@ Cite John Doe's papers [@johndoe2019; @johndoe2020]. This does not suppress the 
 
 Cite a paper by multiple authors [@able2001; @able2002]. This does not suppress the author names for the second article.
 
-Cite a paper by multiple authors with a period in the first author's name [@zebra2003; @zebra2004]. This results in two entries for Zebra 2003, and a suppressed set of names for Zebra 2002 (but without the expected --------).
+Cite a paper by multiple authors with a period in the first author's name [@zebra2003; @zebra2004]. This results in two entries for Zebra 2003, and a suppressed set of names for Zebra 2004 (but without the expected --------).
 
 If we look at the [References] section, the bibliography is rendered properly according to the chicago-author-date CSL file.
