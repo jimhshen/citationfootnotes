@@ -166,10 +166,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chapter-bib-issues" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Chapter-bib issues</h1>
-<p>Chapter-bib seems to ignore parts of the CSL file and breaks bibliography entries by multiple authors where authors have a period in their name.</p>
+<p>Chapter-bib seems to ignore parts of the chicago-author-date CSL file and breaks bibliography entries by multiple authors where authors have a period in their name.</p>
 <p>Cite John Doe’s papers <span class="citation">(John Doe <a href="#ref-johndoe2019" role="doc-biblioref">2019</a>, <a href="#ref-johndoe2020" role="doc-biblioref">2020</a>)</span>. This does not suppress the author’s name for the second article.</p>
 <p>Cite a paper by multiple authors <span class="citation">(Able, Baker, and Dog <a href="#ref-able2001" role="doc-biblioref">2001</a>, <a href="#ref-able2002" role="doc-biblioref">2002</a>)</span>. This does not suppress the author names for the second article.</p>
-<p>Cite a paper by multiple authors with a period in the first author’s name <span class="citation">(Zebra, Yoke, and William <a href="#ref-zebra2003" role="doc-biblioref">2003</a>, <a href="#ref-zebra2004" role="doc-biblioref">2004</a>)</span>. This results in two entries for Zebra 2003, and a suppressed (but without the expected ——–) set of names for Zebra 2002.</p>
+<p>Cite a paper by multiple authors with a period in the first author’s name <span class="citation">(Zebra, Yoke, and William <a href="#ref-zebra2003" role="doc-biblioref">2003</a>, <a href="#ref-zebra2004" role="doc-biblioref">2004</a>)</span>. This results in two entries for Zebra 2003, and a suppressed set of names for Zebra 2002 (but without the expected ——–).</p>
+<p>If we look at the [References] section, the bibliography is rendered properly according to the chicago-author-date CSL file.</p>
 
 </div>
 <h3>References</h3>
