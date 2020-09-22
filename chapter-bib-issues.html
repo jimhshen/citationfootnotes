@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Methods | A Minimal Book Example</title>
+  <title>Chapter 4 Chapter-bib issues | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Methods | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 4 Chapter-bib issues | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Methods | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 4 Chapter-bib issues | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Yihui Xie" />
 
 
-<meta name="date" content="2020-09-14" />
+<meta name="date" content="2020-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Broken footnote citations</a></li>
 <li class="chapter" data-level="3" data-path="workaround-footnote-citations.html"><a href="workaround-footnote-citations.html"><i class="fa fa-check"></i><b>3</b> Workaround Footnote Citations</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="4" data-path="chapter-bib-issues.html"><a href="chapter-bib-issues.html"><i class="fa fa-check"></i><b>4</b> Chapter-bib issues</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
 <li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
@@ -164,10 +164,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="methods" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Methods</h1>
-<p>We describe our methods in this chapter.</p>
+<div id="chapter-bib-issues" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Chapter-bib issues</h1>
+<p>Chapter-bib seems to ignore parts of the CSL file and breaks bibliography entries by multiple authors where authors have a period in their name.</p>
+<p>Cite John Doe’s papers <span class="citation">(John Doe <a href="#ref-johndoe2019" role="doc-biblioref">2019</a>, <a href="#ref-johndoe2020" role="doc-biblioref">2020</a>)</span>. This does not suppress the author’s name for the second article.</p>
+<p>Cite a paper by multiple authors <span class="citation">(Able, Baker, and Dog <a href="#ref-able2001" role="doc-biblioref">2001</a>, <a href="#ref-able2002" role="doc-biblioref">2002</a>)</span>. This does not suppress the author names for the second article.</p>
+<p>Cite a paper by multiple authors with a period in the first author’s name <span class="citation">(Zebra, Yoke, and William <a href="#ref-zebra2003" role="doc-biblioref">2003</a>, <a href="#ref-zebra2004" role="doc-biblioref">2004</a>)</span>. This results in two entries for Zebra 2003, and a suppressed (but without the expected ——–) set of names for Zebra 2002.</p>
 
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-able2001">
+<p>Able, Alpha, Bravo Baker, and Delta Dog. 2001. “An Entry by Multiple Authors.”</p>
+</div>
+<div id="ref-able2002">
+<p>Able, Alpha, Bravo Baker, and Delta Dog. 2002. “Another Entry by Multiple Authors.”</p>
+</div>
+<div id="ref-johndoe2019">
+<p>John Doe. 2019. “John’s First Paper.”</p>
+</div>
+<div id="ref-johndoe2020">
+<p>John Doe. 2020. “John’s Second Paper.”</p>
+</div>
+<div id="ref-zebra2003">
+<p>Zebra, Zulu Z., Yankee Yoke, and Whiskey William. 2003. “An Entry by Multiple Authors, with a Period in the Name.”</p>
+</div>
+<div id="ref-zebra2004">
+<p>Zebra, Zulu Z., Yankee Yoke, and Whiskey William. 2003. “An Entry by Multiple Authors, with a Period in the Name.”</p> 2004. “Another Entry by Multiple Authors, with a Period in the Name.”</p>
+</div>
 </div>
             </section>
 

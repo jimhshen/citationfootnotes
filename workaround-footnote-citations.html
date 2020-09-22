@@ -24,7 +24,7 @@
 <meta name="author" content="Yihui Xie" />
 
 
-<meta name="date" content="2020-09-14" />
+<meta name="date" content="2020-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="intro.html"/>
-<link rel="next" href="methods.html"/>
+<link rel="next" href="chapter-bib-issues.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Broken footnote citations</a></li>
 <li class="chapter" data-level="3" data-path="workaround-footnote-citations.html"><a href="workaround-footnote-citations.html"><i class="fa fa-check"></i><b>3</b> Workaround Footnote Citations</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="4" data-path="chapter-bib-issues.html"><a href="chapter-bib-issues.html"><i class="fa fa-check"></i><b>4</b> Chapter-bib issues</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
 <li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
@@ -167,7 +167,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="workaround-footnote-citations" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Workaround Footnote Citations</h1>
 <p>The workaround is to include an invisible text chunk.</p>
-<p>This is a citation <span class="citation">(John Doe <a href="#ref-johndoe2020a" role="doc-biblioref">2020</a>)</span>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<pre><code>::: {.invisible style=&quot;display:none&quot;}
+@bobjohnson2018
+@janesmith2019
+:::</code></pre>
+<p>This is a citation <span class="citation">(John Doe <a href="#ref-johndoe2020" role="doc-biblioref">2020</a>)</span>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <p>This sentence has another footnote citation.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 <div class="invisible" style="display:none">
 <p><span class="citation">Bob Johnson (<a href="#ref-bobjohnson2018" role="doc-biblioref">2018</a>)</span>
@@ -183,8 +187,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="ref-janesmith2019">
 <p>Jane Smith. 2019. “Article 2.”</p>
 </div>
-<div id="ref-johndoe2020a">
-<p>John Doe. 2020. “Article 1.”</p>
+<div id="ref-johndoe2020">
+<p>John Doe. 2020. “John’s Second Paper.”</p>
 </div>
 </div>
 <div class="footnotes">
@@ -200,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chapter-bib-issues.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
